@@ -5,6 +5,12 @@ represents a bell curve distribution. The INCREMENT, MIN, and MAX variables
 can be changed. If MAX_FREQ is to be increased, change the corresponding 
 "#define MAX_DATA_PLOT" macro in ex_1-13_horizontal.c.
 
+The best way to use this script in the chapter_1 directory is via the terminal.
+Make sure ex_1-13_horizontal.c is compiled.
+"./create_bell_dist.sh"
+"cat bell_dist.txt | ./a.out"
+'
+
 FILE="bell_dist.txt";
 
 MAX_CHARACTERS=20;
