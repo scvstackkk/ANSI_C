@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #define MAX_CHARACTERS 20
+#define MAX_DATA_PLOT 50
 #define IN 1
 #define OUT 0
 
@@ -52,22 +53,15 @@ int main() {
 	
 	// print the histogram data	
 	for (int i = 0; i < MAX_CHARACTERS + 2; ++i) {
-		if (i < 10) {
-			printf("  %d: %d|", i, word_lengths[i]);
-			for (int j = 0; j < word_lengths[i]; ++j) {
-				printf("-");
-			}
-			printf("\n");
-		} 
-		else if (i == 21) {
-			printf("21+: %d|", word_lengths[i]);
-			for (int j = 0; j < word_lengths[i]; ++j) {
+		 if (i == 21) {
+			printf("%02d+: %02d |", i, word_lengths[i]);
+			for (int j = 0; j < word_lengths[i] && j < MAX_DATA_PLOT; ++j) {
 				printf("-");
 			}
 			printf("\n");
 		} else {
-			printf(" %d: %d|", i, word_lengths[i]);
-			for (int j = 0; j < word_lengths[i]; ++j) {
+			printf("%02d : %02d |", i, word_lengths[i]);
+			for (int j = 0; j < word_lengths[i] && j < MAX_DATA_PLOT; ++j) {
 				printf("-");
 			}
 			printf("\n");
