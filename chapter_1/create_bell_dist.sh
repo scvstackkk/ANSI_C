@@ -1,5 +1,10 @@
 #!/bin/bash
 
+:'creates a simple input to the ex_1-13 horizontal histogram program that 
+represents a bell curve distribution. The INCREMENT, MIN, and MAX variables
+can be changed. If MAX_FREQ is to be increased, change the corresponding 
+"#define MAX_DATA_PLOT" macro in ex_1-13_horizontal.c.
+
 FILE="bell_dist.txt";
 
 MAX_CHARACTERS=20;
