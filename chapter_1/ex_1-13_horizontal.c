@@ -13,7 +13,8 @@ words are defined as having no white space characters. Without using dynamic mem
 */
 
 int main() {
-	
+
+	// program variables	
 	int c, state, num_chars, max_word_count;
 	int word_lengths[MAX_CHARACTERS + 2]; // the 0 index will not be used, so +1. +1 for 20+ character words.
 
@@ -45,29 +46,38 @@ int main() {
 		}
 	}
 
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	
+	// print the histogram data	
+	for (int i = 0; i < MAX_CHARACTERS + 2; ++i) {
+		if (i < 10) {
+			printf("  %d: %d|", i, word_lengths[i]);
+			for (int j = 0; j < word_lengths[i]; ++j) {
+				printf("-");
+			}
+			printf("\n");
+		} 
+		else if (i == 21) {
+			printf("21+: %d|", word_lengths[i]);
+			for (int j = 0; j < word_lengths[i]; ++j) {
+				printf("-");
+			}
+			printf("\n");
+		} else {
+			printf(" %d: %d|", i, word_lengths[i]);
+			for (int j = 0; j < word_lengths[i]; ++j) {
+				printf("-");
+			}
+			printf("\n");
+		}
+
+	}
 
 	printf("\n");
-
-	for (int i = 0; i < MAX_CHARACTERS + 2; ++i) {
-		printf("%d: %d", i,word_lengths[i]);
-		printf("\n");
-	}
-
-	/*
-	// print the top border
-	for (i = 0; i < max_word_count + 4; ++i) {
-		printf("_");
-	}
+	printf("\n");
+	printf("\n");
 	
-	printf('\n');
-	
-	// print the histogram data
-	for (i = 1; i < MAX_CHARACTERS + 2; ++i) {
-		if (i == 21) {
-			printf("20+")
-		}
-	} 
-
-	*/
 	return 0;
 }
